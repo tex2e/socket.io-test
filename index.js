@@ -1,13 +1,4 @@
 
-Object.prototype.values = function () {
-  var o = this;
-  var r = [];
-  for (var k in o)
-    if (o.hasOwnProperty(k))
-      r.push(o[k]);
-  return r;
-};
-
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
